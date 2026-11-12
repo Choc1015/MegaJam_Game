@@ -149,3 +149,7 @@
 ### 2026-11-12 TV v2e: 화면 하단 갈색 띠 제거
 - 하단 영역 선택 범위를 넓혀 화면 면 2048 -> 2735 (SM_TV_CRT_v2e), TV_A에 적용. 띠 제거 확인.
 - v2e는 선택이 베젤까지 침범해 롤백. TV_A는 SM_TV_CRT_v2d로 복귀 (하단 얇은 띠는 수용).
+
+### 2026-11-12 TV 화면 발광 연출
+- M_TV_v2_Screen에 FlickerAmount/FlickerSpeed 맥동 추가, MI_TV_v2_Screen Brightness 1.8, TV_A 앞 PointLight TVGlow_A(-200,0,100, 12cd, 반경 300, 푸른 흰빛).
+- 처음 Brightness 4 / 라이트 1000cd는 레벨 노출(AutoExposureBias 6) 때문에 방 전체가 하얗게 날아가서 낮춤. 엔딩에서 화면 끌 때 라이트도 같이 꺼야 함(미구현).
