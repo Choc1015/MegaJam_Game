@@ -89,3 +89,9 @@ WeLoveIndies는 비상업용 전용. 쓰면 비고에 "비상업용"이라고 �
 - tv_cabinet_v2 / film_can_v2 / shoulder_bag_v2 → /Game/Art/Generated/<name>/SM_TvCabinet2, SM_FilmCan2, SM_ShoulderBag2. 각 40크레딧, 합 120 (웹 잔액 3075 → 2955).
 - 프롬프트 요지: "solid closed ... fully enclosed, no hollow" 강조 + 공통 스타일 문구. 폴리곤 5000→10000으로 상향.
 - v1(tv_cabinet, film_can, shoulder_bag)은 속이 빈 껍질/고리 모양이라 레벨에서 교체. 에셋은 남아 있음.
+
+### soban_v2 재생성 (2026-11-12)
+- 에셋: `/Game/Art/Generated/soban_v2/SM_Soban2` (원본 `SourceArt/Generated/soban_v2/`)
+- 출처/툴: Tripo Studio 웹, H3.1, 폴리곤 10000, 텍스처 2K, FBX. 40 크레딧 (잔액 약 2915)
+- 프롬프트 요지: Korean traditional soban, low wooden dining tray table, solid flat top with raised rim, four sturdy short legs (+ 공통 스타일 문구)
+- 라이선스: Tripo 생성물. v1 SM_Soban은 쓰지 않음.
