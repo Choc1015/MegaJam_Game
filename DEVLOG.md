@@ -132,3 +132,9 @@
 - 도구: Blender MCP(면 선택, UV, 내보내기), unreal-worker.
 - 문제: FBX 스케일이 두 번 1/100, 한 번 100배로 들어옴. 해결: `apply_unit_scale=False, global_scale=1.0, FBX_SCALE_NONE`로 내보내기 (SM_TV_CRT_Screen3.fbx).
 - 남음: 씬 전환/엔딩에서 TV를 끄는 로직(ACutTV 연동)은 미구현.
+
+### 2026-11-12 TV 노이즈: 슬롯 분리 대신 마스크 이미시브로 변경 (사용자 요청)
+- 별도 유리 슬롯/메시를 버리고 원본 SM_TV_CRT 유지. 블렌더에서 유리 면의 원본 UV를 `T_TV_ScreenMask.png`로 구워 `M_TV_CRT_Screen`(MI_TV_CRT_Screen)의 Emissive를 마스크 영역에만 적용.
+- 노이즈 좌표는 아틀라스 UV가 조각나 네모로 뭉쳐서 월드 Y,Z * NoiseDensity(0.02) 기준으로 변경.
+- 화면 위쪽에 원본 텍스처의 밝은 띠(유리 반사처럼 보임)가 남음. 거슬리면 마스크 확장.
+- 남은 것: SM_TV_CRT_Screen 에셋은 삭제가 false를 반환해 남아 있음(미사용, 에디터 재시작 후 삭제). 씬 전환 시 TV 끄기 미구현.
