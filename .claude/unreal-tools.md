@@ -105,4 +105,8 @@ unreal-worker가 `describe_toolset`으로 확인한 도구를 한 줄씩 추가�
 - Custom 노드: Inputs 배열 크기 변경은 set_properties로 불가(기본 1개 이름만 변경) → AppendVector로 float4 하나로 묶어 입력
 - StaticMeshComponent 충돌 끄기: BodyInstance {collisionProfileName:"NoCollision"} (소문자 키). 머티리얼 OverrideMaterials:[{refPath}], CastShadow:false
 - Plane 노멀 +X: rotation pitch -90, scale.x=높이/100, scale.y=너비/100
+- StaticMeshTools / generate_convex_collisions(mesh, hull_count, max_hull_verts), set_nanite_enabled(mesh, enabled) — 인자 확인됨. Tripo FBX는 미터 단위(바운딩 ~1)로 들어오니 스폰 시 스케일 ~100 필요, 피벗은 바닥 중앙
+- ProgrammaticToolset 안 execute_tool 이름은 전체 경로 `editor_toolset.toolsets.actor.ActorTools.set_label` 형식(점 구분)
 - SceneTools / trace_world로 TV 외형 측정 가능(케이스 높이, 유리 돌출)
+- EditorAppToolset / CaptureViewport(captureTransform{location,rotation}, annotations{...}) — captureTransform은 xform 일부만 넣어도 동작. 결과(~1MB)는 tool-results 파일로 저장됨
+- ActorTools / set_actor_transform(actor, xform{location,rotation,scale}, worldspace=true) — 전체 필드 넘기면 확인됨

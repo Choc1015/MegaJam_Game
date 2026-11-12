@@ -213,3 +213,4 @@
 - Maru_Chest(_B) 삭제, 선풍기(Maru_Fan)·다이얼 전화기(Maru_Phone) 추가 (A/B 방 각각). 둘 다 Gemini 레퍼런스 → Tripo 이미지→3D(80크레딧). Nanite OFF, 단일 컨벡스 콜리전.
 - 미확인: 소품 정면 방향(yaw), 전화기가 바닥에 놓여 있는 배치.
 - 2026-11-13: 마루에 이미 Prop_Phone_A/B가 있어 Maru_Phone(_B) 삭제(SM_RotaryPhone 에셋은 삭제 실패로 남음, 미사용). 대신 탁상 라디오 Maru_Radio(_B) 추가. 방향(yaw 90) 미확인.
+- 2026-11-13: 마루에 신발 선반 Maru_ShoeRack(_B) 추가, 그 위에 Prop_Phone_A/B(스케일 0.42, yaw 0)와 Maru_Radio(_B)(yaw 0)를 올림. 캡처로 방향 확인(선반·라디오·전화기 모두 방 안쪽을 봄).

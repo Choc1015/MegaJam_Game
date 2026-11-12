@@ -115,3 +115,5 @@ WeLoveIndies는 비상업용 전용. 쓰면 비고에 "비상업용"이라고 �
 | SM_RotaryPhone | Gemini 레퍼런스(rotary_phone_ref.png) → Tripo Studio 이미지→3D (H3.1, 40크레딧) | 자체 생성, Tripo 약관 | 2026-11-13 마루 소품 |
 
 | SM_Radio | Gemini 레퍼런스(radio_ref.png) → Tripo Studio 이미지→3D (H3.1, 40크레딧) | 자체 생성, Tripo 약관 | 2026-11-13 마루 소품 |
+
+| SM_ShoeRack | Gemini 레퍼런스(shoe_rack_ref.png) → Tripo Studio 이미지→3D (H3.1, 40크레딧) | 자체 생성, Tripo 약관 | 2026-11-13 마루 신발 선반 |
