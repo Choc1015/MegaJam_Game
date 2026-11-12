@@ -84,3 +84,8 @@ WeLoveIndies는 비상업용 전용. 쓰면 비고에 "비상업용"이라고 �
 - film_can(필름 통): "a round flat metal film reel canister with a plain paper label, slightly dented" — 20000
 - paper_notes(필기 종이): 1차는 한옥 그림이 나와 버리고, 2차 "a thin flat rectangular sheet of white lined notebook paper filled with many rows of tiny handwritten blue ink scribble lines like a screenplay page, no drawings, lying flat" 채택 — 5000 (크레딧 80)
 - 총 크레딧 400(웹 잔액 3475 → 3075 예상). 파일: SourceArt/Generated/<이름>/<이름>.fbx
+
+### 소품 3종 재생성 (2026-11-12, Tripo Studio 웹 H3.1, 2K, 삼각형 10000)
+- tv_cabinet_v2 / film_can_v2 / shoulder_bag_v2 → /Game/Art/Generated/<name>/SM_TvCabinet2, SM_FilmCan2, SM_ShoulderBag2. 각 40크레딧, 합 120 (웹 잔액 3075 → 2955).
+- 프롬프트 요지: "solid closed ... fully enclosed, no hollow" 강조 + 공통 스타일 문구. 폴리곤 5000→10000으로 상향.
+- v1(tv_cabinet, film_can, shoulder_bag)은 속이 빈 껍질/고리 모양이라 레벨에서 교체. 에셋은 남아 있음.
