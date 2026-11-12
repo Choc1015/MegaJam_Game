@@ -158,3 +158,8 @@
 - M_TV_v2_Screen: Pulse = Lerp(PulseMin, 1, 0.5+0.5*Sin(Time*PulseSpeed)). MI_TV_v2_Screen: GlowColor (0.1,0.35,1.0), Brightness 2.5, PulseMin 0, PulseSpeed 2.5.
 - TV_B: SM_TV_CRT_v2d로 교체, 슬롯0=MI_TV_v2_Body, 슬롯1=MI_TV_v2_Screen_Off(무발광 어두운 유리). 화면 UV가 평면 투영이라 몸체 텍스처를 쓰면 누더기로 보여서 분리.
 - 구 TV 에셋(SM_TV_CRT, MI_TV_CRT_Screen 등)은 이제 안 씀. 사용자가 수동 삭제 가능.
+
+### 2026-11-12 ACutTV 화면 끄기
+- ACutTV: SetScreenOn(bool)(FadeTime 1.2초에 걸쳐 화면 Brightness와 GlowLight 강도를 같이 줄임), AllowTurnOff()(결말에서 호출하면 E가 판 전환 대신 끄기, 문구 "Turn off", 짝 TV도 같이 꺼짐), ScreenSlot/BrightnessParam/GlowLight 프로퍼티. BeginPlay에서 화면 슬롯에 MID 생성.
+- TV_A.GlowLight = TVGlow_A. 에디터 열린 채로는 Live Coding 불가라 닫고 UBT 빌드(성공).
+- 미구현: 결말 코드에서 AllowTurnOff() 호출. 미확인: PIE에서 실제로 꺼지는지.
