@@ -145,3 +145,6 @@
 - 2026-11-12 TV를 원래 모습으로 복귀: 노이즈 제거, M_TV_CRT_Screen은 원본 BaseColor/Roughness + 유리 마스크(T_TV_ScreenMask) 영역만 균일한 푸른 이미시브(Brightness 1.0). 도구: Unreal MCP.
 
 - 2026-11-12 TV 새로 생성: Tripo 웹 H3.1 (40크레딧, 27k면), 화면을 균일 단색 패널로 뽑아 블렌더에서 2048면을 슬롯1(화면)로 분리 + 화면 UV 0~1. SM_TV_CRT_v2d(슬롯0 MI_TV_v2_Body, 슬롯1 MI_TV_v2_Screen 이미시브). TV_A에 적용, TV_B는 아직 SM_TV_CRT. 프롬프트: 화면을 flat uniform gray glass panel로 지정. v2~v2c는 선택 영역 확장 시도(미사용).
+
+### 2026-11-12 TV v2e: 화면 하단 갈색 띠 제거
+- 하단 영역 선택 범위를 넓혀 화면 면 2048 -> 2735 (SM_TV_CRT_v2e), TV_A에 적용. 띠 제거 확인.
