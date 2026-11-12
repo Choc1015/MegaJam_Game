@@ -89,3 +89,15 @@ unreal-worker가 `describe_toolset`으로 확인한 도구를 한 줄씩 추가�
 - EditorAppToolset / CaptureViewport — gridSpacing 0, gridExtent 0, gridHeight 0, maxLabelDistance 0, maxLabels 0, classFilter {refPath:"/Script/Engine.Actor"} 인자 필요
 - ProgrammaticToolset / get_execution_environment() — 스크립트 환경 안내(스크립트 쓰기 전 1회 호출 필수)
 - ProgrammaticToolset / execute_tool_script(script) — 파이썬 스크립트 실행. `def run()` 이 dict 반환, 내부에서 `execute_tool("<전체 도구명>", json.dumps({...}))["returnValue"]` 로 호출(실패 시 RuntimeError), import 가능: json, math, datetime, copy, re, time
+
+## 소품 배치 중 추가된 메모
+- editor_toolset.toolsets.scene.SceneTools / add_to_scene_from_asset(asset_path,name,xform{location,rotation,scale}) — 메시 에셋 경로로 StaticMeshActor 배치
+- editor_toolset.toolsets.scene.SceneTools / set_actor_folder(actor,folder_path) — 아웃라이너 폴더
+- editor_toolset.toolsets.scene.SceneTools / find_actors(name,tag,collision_channels) — name만 채우고 tag:"" collision_channels:[] 필수
+- editor_toolset.toolsets.actor.ActorTools / set_label(actor,label), get_label, get_actor_bounds(월드 AABB)
+- editor_toolset.toolsets.actor.ActorTools / set_actor_transform(actor,xform) — 빠진 필드는 "유지"가 아니라 identity로 리셋됨. location/rotation/scale 전부 넘길 것
+- editor_toolset.toolsets.asset.AssetTools / save_assets(asset_paths=[]) — 빈 리스트 = 전체 저장
+- EditorToolset.EditorAppToolset / CaptureViewport(captureTransform, annotations{gridSpacing:0,gridExtent:0,gridHeight:0,maxLabelDistance:0,maxLabels:0}) — annotations 필수. 결과는 base64 JSON이 ~1MB라 파일로만 저장됨 (Bash 없으면 이미지 못 봄)
+- editor_toolset.toolsets.object.ObjectTools / get_properties(instance{refPath},properties[]), set_properties(instance,values=JSON문자열) — 컴포넌트 refPath는 "<액터refPath>.CutVisibility", 열거값은 문자열
+- editor_toolset.toolsets.actor.ActorTools / get_components(actor), get_actor_transform(actor)
+- editor_toolset.toolsets.programmatic.ProgrammaticToolset / execute_tool_script — execute_tool(name, json.dumps(args))

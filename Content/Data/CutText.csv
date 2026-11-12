@@ -6,10 +6,10 @@ ID,Text
 Caption.Theatrical,Theatrical Cut
 Caption.Directors,Director's Cut
 TV,꺼진 화면에 내가 비친다.
-Bed.T,이불이 아직 따뜻하다.
-Bed.D,이불이 차갑게 식어 있다.
-Note.T,"오늘도 열이 오른다.\n약은 아직 오지 않았다."
-Note.D,"누군가 여기에 적어 두었다.\n오른쪽 서랍, 푸른 봉지."
+Bed.D,이불이 아직 따뜻하다.
+Bed.T,이불이 차갑게 식어 있다.
+Note.D,"오늘도 열이 오른다.\n약은 아직 오지 않았다."
+Note.T,"누군가 여기에 적어 두었다.\n오른쪽 서랍, 푸른 봉지."
 Chest,잠겨 있지 않다.
 Medicine,작은 약봉지.
 Medicine.Success,"숨소리가 조금 고르게 된다."
