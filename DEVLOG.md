@@ -208,3 +208,7 @@
 - 3D 모델링 규칙: 레퍼런스 이미지(Gemini) → Tripo/Meshy 이미지 입력. gen-3d 스킬과 CLAUDE.md에 기록.
 - 임포트는 Nanite OFF + convex 콜리전.
 - 찬장(궤짝)이 마음에 안 든다는 결정으로 벽 선반(시렁)으로 교체. Gemini 레퍼런스 → Tripo 40 크레딧.
+
+### 2026-11-13 마루 소품 교체
+- Maru_Chest(_B) 삭제, 선풍기(Maru_Fan)·다이얼 전화기(Maru_Phone) 추가 (A/B 방 각각). 둘 다 Gemini 레퍼런스 → Tripo 이미지→3D(80크레딧). Nanite OFF, 단일 컨벡스 콜리전.
+- 미확인: 소품 정면 방향(yaw), 전화기가 바닥에 놓여 있는 배치.
