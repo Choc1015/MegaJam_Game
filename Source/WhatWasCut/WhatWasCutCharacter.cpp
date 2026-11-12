@@ -28,8 +28,10 @@ AWhatWasCutCharacter::AWhatWasCutCharacter()
 
 	// Create the Camera Component	
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("First Person Camera"));
-	FirstPersonCameraComponent->SetupAttachment(FirstPersonMesh, FName("head"));
-	FirstPersonCameraComponent->SetRelativeLocationAndRotation(FVector(-2.8f, 5.89f, 0.0f), FRotator(0.0f, 90.0f, -90.0f));
+	// 눈높이 135cm: 캡슐(중심이 바닥+75)에 붙이고 상대 Z 60 (ROOM_PLAN §1)
+	FirstPersonCameraComponent->SetupAttachment(GetCapsuleComponent());
+	FirstPersonCameraComponent->SetRelativeLocationAndRotation(FVector(0.f, 0.f, 60.f), FRotator::ZeroRotator);
+	FirstPersonCameraComponent->SetFieldOfView(95.f);
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
 	FirstPersonCameraComponent->bEnableFirstPersonFieldOfView = true;
 	FirstPersonCameraComponent->bEnableFirstPersonScale = true;
@@ -40,7 +42,8 @@ AWhatWasCutCharacter::AWhatWasCutCharacter()
 	GetMesh()->SetOwnerNoSee(true);
 	GetMesh()->FirstPersonPrimitiveType = EFirstPersonPrimitiveType::WorldSpaceRepresentation;
 
-	GetCapsuleComponent()->SetCapsuleSize(34.0f, 96.0f);
+	GetCapsuleComponent()->SetCapsuleSize(30.0f, 75.0f);
+	GetCharacterMovement()->MaxWalkSpeed = 200.f;
 
 	// Configure character movement
 	GetCharacterMovement()->BrakingDecelerationFalling = 1500.0f;

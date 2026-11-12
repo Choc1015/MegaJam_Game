@@ -104,3 +104,9 @@
 - 사용자 결정: 방을 키우지 말고 시야를 내리고 넓게, 방을 채운다. 마루·부엌은 안방에 이어서 짓는다.
 - 도구: Claude Opus 5.5(기획), unreal-worker(sonnet)로 방 A 배치 조회, general-purpose(sonnet)로 구현자 시점 검토.
 - 남은 일: 구현 세션(Sonnet 5.5)이 §8 확인(Chest_A의 AcceptItemId, TV 도착점) 뒤 단계 1부터.
+
+## 2026-11-12 방 뼈대 구현 (ROOM_PLAN 단계 1)
+- 한 일: 시점(눈높이 135, 캡슐 r30 hh75, FOV 95, 걷기 200)을 C++와 BP_FirstPersonCharacter 양쪽에 반영(C++는 아직 컴파일 안 함: Ctrl+Alt+F11). 절차적 머티리얼 M_Jangpan/M_Wall_Lower/M_Wall_Upper/M_Wood_Dark/M_Changho/M_Maru/M_Earth/M_Soot/M_Prop. 방 A·B 구조(바닥·벽·천장·기둥·인방·걸레받이·문틀·창·방문·형광등), 마루·부엌 뼈대를 큐브로 짓고 방 B는 x+6000 복제. 템플릿 지오메트리와 하늘·태양·안개·구름 제거. 빛 §5 대로 배치(스탠드 250, TV, 달빛/창, 형광등 160, 마루·부엌 약한 점광원). PPV: 전역 unbound(노출 Manual) + 방별 bound. PlayerStart (-165,-150) yaw 85.
+- 도구: unreal-worker(sonnet)로 소품 배치·액터 정리, 메인 세션이 MCP 스크립트로 구조·빛.
+- 문제와 해결: set_actor_transform은 빠뜨린 필드를 초기화하므로 위치·회전·스케일을 항상 다 줌. find_actors name이 부분 일치라 'Stand_A'가 소품 메시도 잡음(PointLight로 필터). 노출은 시작값(bias 6)에서 눈으로 맞춤. Live Coding은 MCP로 못 켬.
+- 남은 일: PIE로 도착 지점·눈높이 확인, 방 B 스탠드 소품 숨김 여부, 빛 미세 조정.
