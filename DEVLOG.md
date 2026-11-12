@@ -195,3 +195,9 @@
 - Bedside_A/B(CutUseTarget/StaticMesh) 메시를 큐브→SM_Soban2로 교체 (A (132,89,0), B (6132,89,0), scale 66.2). Bedside_A의 AcceptItemId=medicine, TextId=Chest 그대로. 장식용 SM_Soban 삭제.
 - 방 B에 TvCabinet/Cushion/FilmCan/Kettle/PhotoFrame 복제(Props_New_B), TVStand_B 삭제 후 장식장으로 대체.
 - 확인 필요: 방 B 캡처에서 벽 쪽이 검게 보임(조명/후처리 확인).
+
+## 2026-11-13 마루·부엌 소품 생성
+- 도구: Tripo Studio 웹(H3.1). 추천 후 사용자 승인("ㄱㄱ")으로 6종 생성: 나무 의자, 고무신, 대바구니, 찬장, 부뚜막, 가계부.
+- 문제: 가계부 첫 결과가 책 위에 작은 집이 얹힌 형태 → 프롬프트에 "nothing on top of it, solid, fully enclosed" 추가해 재생성, 성공.
+- 다음: 언리얼 임포트, 마루·부엌 배치, 방 B 복제(고무신 제외).
+- 임포트(SM_WoodenStool/RubberShoes/BambooBasket/Cupboard/HearthStove/AccountBook, Nanite+convex) 후 부엌·마루 배치, 방 B 복제(고무신 제외). 쌀독은 부뚜막과 겹쳐 (-590,-330)으로 이동. 부엌 캡처로 확인(마루·앞면 방향은 미확인).

@@ -95,3 +95,14 @@ WeLoveIndies는 비상업용 전용. 쓰면 비고에 "비상업용"이라고 �
 - 출처/툴: Tripo Studio 웹, H3.1, 폴리곤 10000, 텍스처 2K, FBX. 40 크레딧 (잔액 약 2915)
 - 프롬프트 요지: Korean traditional soban, low wooden dining tray table, solid flat top with raised rim, four sturdy short legs (+ 공통 스타일 문구)
 - 라이선스: Tripo 생성물. v1 SM_Soban은 쓰지 않음.
+
+### 2026-11-13 마루·부엌 소품 6종 (Tripo Studio 웹, H3.1, polygon 10000, 2K, 각 40 크레딧)
+| 에셋 | 폴더 | 용도 | 비고 |
+|---|---|---|---|
+| wooden_stool | SourceArt/Generated/wooden_stool | 부엌/마루 | 나무 의자 |
+| rubber_shoes | SourceArt/Generated/rubber_shoes | 마루 끝 (감독판만) | 고무신 |
+| bamboo_basket | SourceArt/Generated/bamboo_basket | 부엌 | 대바구니 |
+| cupboard | SourceArt/Generated/cupboard | 부엌 | 유리 미닫이 찬장 |
+| hearth_stove | SourceArt/Generated/hearth_stove | 부엌 | 부뚜막+솥 |
+| account_book | SourceArt/Generated/account_book | 부엌 가계부 | 1차 생성은 책 위에 집이 얹혀 폐기(40 크레딧), 재생성 |
+스타일 문구는 CLAUDE.md 공통. 총 7회 생성 280 크레딧, 잔액 약 2635.
