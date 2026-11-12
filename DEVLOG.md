@@ -126,3 +126,9 @@
 - 문제: Custom HLSL 노드 버전은 화면이 검게 나옴 → 내장 노드로 재작성해 해결.
 - 미완: 스캔라인·굴러가는 띠, 판 전환/끄기 시 노이즈 숨김 연동(ACutTV 연결 안 함), 실제 PIE 확인.
 - TV 노이즈 평면이 옆에서 종이처럼 보여 볼록 돔 메시(SM_TV_Screen, 50.5x43.3cm, 중앙 +2.2cm)로 교체. Blender 연결 불가라 PowerShell로 OBJ를 직접 생성(SourceArt/Generated/tv_screen). TVScreen_B가 레벨에서 사라져 있어 새로 만듦.
+
+### 2026-11-12 TV 노이즈 화면을 메시 일체형으로 교체
+- 앞에 띄운 오버레이(TVScreen_A/B)가 티 나서, 블렌더에서 SM_TV_CRT 유리 면(1274면)을 2번째 머티리얼 슬롯으로 분리해 FBX 재임포트 (`SM_TV_CRT_Screen`). 슬롯0 MI_TV_CRT, 슬롯1 M_TV_Noise. TV_A/B 메시 교체, 오버레이 액터 삭제.
+- 도구: Blender MCP(면 선택, UV, 내보내기), unreal-worker.
+- 문제: FBX 스케일이 두 번 1/100, 한 번 100배로 들어옴. 해결: `apply_unit_scale=False, global_scale=1.0, FBX_SCALE_NONE`로 내보내기 (SM_TV_CRT_Screen3.fbx).
+- 남음: 씬 전환/엔딩에서 TV를 끄는 로직(ACutTV 연동)은 미구현.
