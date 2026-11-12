@@ -106,3 +106,5 @@ WeLoveIndies는 비상업용 전용. 쓰면 비고에 "비상업용"이라고 �
 | hearth_stove | SourceArt/Generated/hearth_stove | 부엌 | 부뚜막+솥 |
 | account_book | SourceArt/Generated/account_book | 부엌 가계부 | 1차 생성은 책 위에 집이 얹혀 폐기(40 크레딧), 재생성 |
 스타일 문구는 CLAUDE.md 공통. 총 7회 생성 280 크레딧, 잔액 약 2635.
+
+| SM_HearthStoveV2 / SM_CupboardV2 | Tripo Studio 웹 H3.1 image-to-3D (각 40 크레딧) | 레퍼런스: Gemini 웹에서 생성한 `SourceArt/Reference/hearth_stove_ref.png`, `cupboard_ref.png` (Claude in Chrome으로 직접 생성). 2026-11-13. 텍스트 프롬프트로 뽑은 첫 버전이 이상해서 교체 | AI 생성 (Gemini → Tripo) |

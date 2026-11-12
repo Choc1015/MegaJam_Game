@@ -202,3 +202,8 @@
 - 다음: 언리얼 임포트, 마루·부엌 배치, 방 B 복제(고무신 제외).
 - 임포트(SM_WoodenStool/RubberShoes/BambooBasket/Cupboard/HearthStove/AccountBook, Nanite+convex) 후 부엌·마루 배치, 방 B 복제(고무신 제외). 쌀독은 부뚜막과 겹쳐 (-590,-330)으로 이동. 부엌 캡처로 확인(마루·앞면 방향은 미확인).
 - 문제: 새 소품(찬장 등)이 언리얼에서 찌그러져 보임 → 원인은 Nanite(로우폴리 메시). 6종 Nanite 끔. .uasset이 읽기전용(LFS lockable)이라 저장 실패했고 속성 해제 후 저장. 앞으로 임포트 시 Nanite off 기본.
+
+## 2026-11-13 부엌 아궁이·찬장 재생성
+- 텍스트 프롬프트로 뽑은 Kitchen_Hearth/Cupboard가 이상해서, Gemini(웹, Claude in Chrome)로 레퍼런스 PNG를 만들고 Tripo Studio image-to-3D(H3.1, 각 40 크레딧)로 다시 생성. 결과 훨씬 안정적.
+- 3D 모델링 규칙: 레퍼런스 이미지(Gemini) → Tripo/Meshy 이미지 입력. gen-3d 스킬과 CLAUDE.md에 기록.
+- 임포트는 Nanite OFF + convex 콜리전.
