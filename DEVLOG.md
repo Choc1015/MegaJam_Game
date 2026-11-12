@@ -226,3 +226,6 @@
 - 도구: Gemini(레퍼런스 이미지) → Tripo Studio image-to-3D(H3.1) → unreal-worker 임포트/배치.
 - 프롬프트 요지: 한국 시골집 짚 빗자루(단 묶음+나무 자루), 단일 오브젝트, 밝은 회색 배경.
 - 마루 서쪽 구석(남벽 서쪽 끝)에 A/B방 배치.
+
+### 2026-11-13 안방 책장
+- Gemini 레퍼런스 → Tripo H3.1 image-to-3D → unreal-worker 임포트. 사용자가 왼쪽 벽에 직접 재배치 예정.
