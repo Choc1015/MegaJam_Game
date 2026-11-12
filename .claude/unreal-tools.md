@@ -101,3 +101,8 @@ unreal-worker가 `describe_toolset`으로 확인한 도구를 한 줄씩 추가�
 - editor_toolset.toolsets.object.ObjectTools / get_properties(instance{refPath},properties[]), set_properties(instance,values=JSON문자열) — 컴포넌트 refPath는 "<액터refPath>.CutVisibility", 열거값은 문자열
 - editor_toolset.toolsets.actor.ActorTools / get_components(actor), get_actor_transform(actor)
 - editor_toolset.toolsets.programmatic.ProgrammaticToolset / execute_tool_script — execute_tool(name, json.dumps(args))
+- MaterialTools / create_material(folder_path,asset_name), add_expression(material_or_function,expression_class{refPath:/Script/Engine.MaterialExpressionX},x,y), connect_expressions(from_expression,from_output_name"",to_expression,to_input_name), connect_to_output(expression,output_name"",material_property), recompile — 노드 속성은 ObjectTools/set_properties, Unlit은 {"ShadingModel":"MSM_Unlit"}
+- Custom 노드: Inputs 배열 크기 변경은 set_properties로 불가(기본 1개 이름만 변경) → AppendVector로 float4 하나로 묶어 입력
+- StaticMeshComponent 충돌 끄기: BodyInstance {collisionProfileName:"NoCollision"} (소문자 키). 머티리얼 OverrideMaterials:[{refPath}], CastShadow:false
+- Plane 노멀 +X: rotation pitch -90, scale.x=높이/100, scale.y=너비/100
+- SceneTools / trace_world로 TV 외형 측정 가능(케이스 높이, 유리 돌출)
