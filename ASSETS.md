@@ -119,5 +119,4 @@ WeLoveIndies는 비상업용 전용. 쓰면 비고에 "비상업용"이라고 �
 | SM_ShoeRack | Gemini 레퍼런스(shoe_rack_ref.png) → Tripo Studio 이미지→3D (H3.1, 40크레딧) | 자체 생성, Tripo 약관 | 2026-11-13 마루 신발 선반 |
 
 | SM_CornBundle (/Game/Art/Generated/corn_bundle) | Gemini 웹 레퍼런스 → Tripo Studio H3.1 이미지→3D (40크레딧) | 마루 벽걸이 옥수수 두름. SourceArt/Reference/corn_bundle_ref.png | 2026-11-13 |
-| SM_WallMirror (/Game/Art/Generated/wall_mirror) | Gemini 웹 레퍼런스 → Tripo Studio H3.1 이미지→3D (40크레딧) | 마루 벽걸이 둥근 나무틀 거울. wall_mirror_ref.png | 2026-11-13 |
 | SM_StrawHat (/Game/Art/Generated/straw_hat) | Gemini 웹 레퍼런스 → Tripo Studio H3.1 이미지→3D (40크레딧) | 마루 벽걸이 밀짚모자. straw_hat_ref.png | 2026-11-13 |
