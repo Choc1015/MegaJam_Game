@@ -190,3 +190,8 @@
 ## 2026-11-12 소반 재생성·교체 (방 A)
 - Tripo 웹(H3.1, 폴리곤 10000)으로 soban_v2 생성, SM_Soban2 임포트 후 방 A 소반 교체 (scale 66.2, 윗면 z≈21).
 - 주전자 (242,112), 액자 (212,124)로 옮겨 소반 윗면 안에 들어오게 함. 윗면이 낮고 어두워 보임: 필요하면 높이 스케일 조정.
+
+## 2026-11-13 머리맡 소반 교체·방 B 소품 복제
+- Bedside_A/B(CutUseTarget/StaticMesh) 메시를 큐브→SM_Soban2로 교체 (A (132,89,0), B (6132,89,0), scale 66.2). Bedside_A의 AcceptItemId=medicine, TextId=Chest 그대로. 장식용 SM_Soban 삭제.
+- 방 B에 TvCabinet/Cushion/FilmCan/Kettle/PhotoFrame 복제(Props_New_B), TVStand_B 삭제 후 장식장으로 대체.
+- 확인 필요: 방 B 캡처에서 벽 쪽이 검게 보임(조명/후처리 확인).
