@@ -85,7 +85,7 @@ DeepSeek는 OpenCode로 쓸 수 있다(`delegate-deepseek` 스킬). 모델을 �
 
 `stylized low-poly, hand-painted flat colors, warm muted palette, soft rounded shapes, prop from an old Korean countryside house, single object, plain background, no text, no logo`
 
-극장판과 감독판은 같은 모델을 쓰고, 차이는 후처리로만 낸다 (극장판: 따뜻하고 선명 / 감독판: 색 빠진 푸른빛, 필름 노이즈, 검은 띠).
+감독판(지금의 집)과 극장판(TV 너머의 끝난 집)은 같은 모델을 쓰고, 차이는 후처리로만 낸다 (감독판: 따뜻하고 선명 / 극장판: 색 빠진 푸른빛, 필름 노이즈, 검은 띠).
 
 ## 범위 원칙
 
