@@ -93,3 +93,8 @@
 - 남은 일: TV_Test와 TV_A 겹침(TV_A 메시를 SM_TV_CRT로), 방 B 조명 어두움, DESIGN.md 옛 이름 정리, 약장/장롱 벽 파고듦.
 
 - **2026-11-12 19:40 KST · 문서 동기화 (기획 세션):** `Docs/DESIGN.md`를 3판(15:08, 극장판·감독판 이름 맞바꿈)으로 바꿨다. 그동안 이 폴더의 사본은 2판이었고, 3판은 `C:\UnrealProject\MegaJam`에만 있었다. `CLAUDE.md` "아트 스타일" 절의 룩 한 줄도 새 이름으로 고쳤다. 코드는 커밋 8e5a3dd에서 이미 3판 이름을 따르고 있다. 쓴 툴: Claude Code.
+
+## 2026-11-12 TV 교체
+- TV_A/TV_B(ACutTV)의 박스 플레이스홀더를 SM_TV_CRT로 교체. 위치 (∓270,0,0)(+6000), yaw -90, 스케일 0.7. Partner/Presence 등 속성 그대로. 임시 TV_Test 삭제.
+- 설계 문서(DESIGN.md)는 기획 세션이 이미 새 이름(감독판=지금, 극장판=끝난 세계)으로 반영함.
+- 도구: unreal-worker(sonnet). 캡처로 화면이 방 안쪽을 향함을 확인.
