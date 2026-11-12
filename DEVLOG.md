@@ -201,3 +201,4 @@
 - 문제: 가계부 첫 결과가 책 위에 작은 집이 얹힌 형태 → 프롬프트에 "nothing on top of it, solid, fully enclosed" 추가해 재생성, 성공.
 - 다음: 언리얼 임포트, 마루·부엌 배치, 방 B 복제(고무신 제외).
 - 임포트(SM_WoodenStool/RubberShoes/BambooBasket/Cupboard/HearthStove/AccountBook, Nanite+convex) 후 부엌·마루 배치, 방 B 복제(고무신 제외). 쌀독은 부뚜막과 겹쳐 (-590,-330)으로 이동. 부엌 캡처로 확인(마루·앞면 방향은 미확인).
+- 문제: 새 소품(찬장 등)이 언리얼에서 찌그러져 보임 → 원인은 Nanite(로우폴리 메시). 6종 Nanite 끔. .uasset이 읽기전용(LFS lockable)이라 저장 실패했고 속성 해제 후 저장. 앞으로 임포트 시 Nanite off 기본.
