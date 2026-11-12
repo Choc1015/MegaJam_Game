@@ -77,5 +77,15 @@ unreal-worker가 `describe_toolset`으로 확인한 도구를 한 줄씩 추가�
 - AssetTools / exists(path) — 에셋/폴더 존재 여부
 - AssetTools / list_folders(root_path, recursive=true) — 하위 폴더 목록
 - AssetTools / create_folder(path) — 폴더 생성
+- StaticMeshTools / import_file(folder_path, asset_name, source_file, import_materials, import_textures, combine_meshes=true) — FBX 등을 스태틱 메시로 임포트(머티리얼/텍스처는 원래 이름으로 생성되니 move로 개명). 반환엔 메시만 나옴
+- StaticMeshTools / get_bounds(mesh) — 로컬 바운딩 박스(cm)
+- StaticMeshTools / get_triangle_count(mesh, lod_index=0) / get_vertex_count — 삼각형/정점 수
+- StaticMeshTools / get_material_slots(mesh), get_material(mesh, slot_name), set_material(mesh, slot_name, material) — 머티리얼 슬롯
+- StaticMeshTools / generate_lods, generate_convex_collisions, set_nanite_enabled, remove_lods, remove_collisions — LOD/콜리전/나나이트
+- 임포트 절차(검증됨): StaticMeshTools/import_file(import_materials/textures=true)가 머티리얼 BaseColor에 TextureSample을 자동 연결하고 슬롯에도 할당함. 이후 find_assets로 폴더 조회 → AssetTools/move로 M_/T_ 개명(이동해도 연결 유지). 메시 refPath는 `/경로/SM_X.SM_X` 형식 필요(`/경로/SM_X`만 쓰면 invalid object path)
+- MaterialTools / get_property_input(material{refPath}, material_property "MP_BaseColor") — BaseColor에 연결된 노드 확인(expression None이면 미연결)
+- AssetTools / get_asset_class(asset_path) — 클래스 판별용(texture/material 구분)
+- AssetTools / get_dependencies — 의존성 없으면 오류('NoneType' not iterable) 가능
+- EditorAppToolset / CaptureViewport — gridSpacing 0, gridExtent 0, gridHeight 0, maxLabelDistance 0, maxLabels 0, classFilter {refPath:"/Script/Engine.Actor"} 인자 필요
 - ProgrammaticToolset / get_execution_environment() — 스크립트 환경 안내(스크립트 쓰기 전 1회 호출 필수)
 - ProgrammaticToolset / execute_tool_script(script) — 파이썬 스크립트 실행. `def run()` 이 dict 반환, 내부에서 `execute_tool("<전체 도구명>", json.dumps({...}))["returnValue"]` 로 호출(실패 시 RuntimeError), import 가능: json, math, datetime, copy, re, time

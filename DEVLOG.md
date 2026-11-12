@@ -63,3 +63,25 @@
 ## 2026-11-12 — 판 이름 교체 (DESIGN.md 3판)
 - 극장판 = TV 너머의 끝난 집(푸른 틴트·검은 띠), 감독판 = 지금의 집(따뜻함, 시작 판). 시작 글자 카드 제거, 극장판으로 처음 건너갈 때만 `Theatrical Cut`. 결말 03:40 `Director's Cut` 카드는 미구현.
 - 레벨: 방 A=감독판만, 방 B=극장판만, 글 ID 접미사 교체. enum 표시 이름 한글화(감독판만/극장판만/둘 다).
+
+### 2026-11-12 모델링 단계 시작
+- Gemini(Nano Banana)로 CRT TV 레퍼런스 생성, `SourceArt/Reference/tv_ref_01.png` 저장. 흰 배경 단일 오브젝트. 이 이미지를 화풍 기준으로 삼아 다른 소품 레퍼런스에 첨부.
+- 문제: 처음엔 일반 Gemini 모드로 생성되어 이미지 모드로 재생성. 배경이 벽/선반이라 "plain solid off-white background" 명시해 재생성.
+- 다음: Tripo/Meshy에 이 이미지를 넣어 TV 모델 생성(gen-3d).
+- Tripo 웹(H3.1, 2K, 삼각형, 폴리 30000 설정)으로 tv_ref_01.png → TV 모델 생성, 40 크레딧(웹 잔액 4195). 결과 25,312 tri. FBX(Mixamo 프리셋) 내보내기는 추가 크레딧 없음. 산출물 `SourceArt/Generated/tv_crt/`.
+- 팁: 크롬 확장 업로드는 세션이 읽을 수 있는 폴더(스크래치패드)로 복사해야 함.
+- 언리얼 임포트: `/Game/Art/Generated/tv_crt/` SM_TV_CRT, M_TV_CRT, T_TV_CRT_BaseColor. 크기 약 87x57x98cm, 피벗 바닥 중앙, 25,312 tri, 슬롯 1개. 뷰포트 육안 확인은 아직.
+
+### 2026-11-12 소품 레퍼런스 이미지 17장 생성
+- 도구: Gemini(Nano Banana, 이미지 모드), 같은 대화에서 TV 이미지를 스타일 기준으로 사용.
+- 한 일: 소품 17종(grandma_blanket, blanket_folded, portrait_frame, incense_burner, wall_clock, desk_lamp, medicine_cabinet, notebook, result_envelope, chest, key, medicine_packet, rice_jar, calendar, phone, wardrobe, white_cloth) 레퍼런스를 `SourceArt/Reference/<이름>_ref.png`로 저장. 프롬프트는 `Docs/PROPS_PROMPTS.md`의 요지 + 스타일 문구.
+- 메모: 조명 인물/사진풍으로 쏠리는 경우가 있어(desk_lamp 등) Tripo 결과를 보고 필요하면 재생성.
+- 다음: Tripo 웹 H3.1로 모델 생성(개당 40크레딧), FBX 내보내기, 언리얼 임포트.
+
+### 2026-11-12 소품 3D 모델 17개 생성 (Tripo)
+- 도구: Claude in Chrome으로 Tripo Studio 웹 조작. H3.1, 이미지→3D(입력은 Gemini 레퍼런스), 2K 텍스처, 폴리곤 30000, 조명 제거. 개당 40크레딧, FBX 내보내기는 추가 크레딧 없음. 개당 약 3.5분.
+- 결과: tv_crt 포함 18개 중 17개를 `SourceArt/Generated/<이름>/<이름>.fbx`로 저장. 웹 잔액 약 3515(시작 4155).
+- 문제: ① 업그레이드 팝업이 생성 클릭을 가림, "Maybe Later"로 닫음. ② 내보내기 전에 페이지를 벗어나 wall_clock 내보내기가 날아가 재내보냄. ③ 폴리가 약 25~29k tri로 초안(1만 이하)보다 큼.
+- 품질 메모: result_envelope는 덩어리진 형태, key는 얇은 막대, medicine_packet은 단순함. 필요하면 재생성.
+- 다음: 언리얼 임포트(unreal-worker 진행 중), 레벨 배치.
+- 언리얼 임포트 완료: 17개 모두 `/Game/Art/Generated/<이름>/`에 SM_/M_/T_ 3종씩. 삼각형 25.6k~29.7k, 머티리얼 BaseColor 연결 확인. 레벨 배치와 뷰포트 육안 확인은 아직.
