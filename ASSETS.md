@@ -72,3 +72,15 @@ WeLoveIndies는 비상업용 전용. 쓰면 비고에 "비상업용"이라고 �
 | SourceArt/Generated/white_cloth/white_cloth.fbx (+ 텍스처 PNG) | 3D 모델 | Tripo Studio 웹 H3.1, 이미지→3D (입력: white_cloth_ref.png) | Tripo 약관 | 2026-11-12, 2K 텍스처, 삼각형, 폴리 30000 설정, 40크레딧, FBX 내보내기 무료 |
 
 - SM_TV_CRT_v2 (SM_TV_CRT_v2d 사용) | Tripo Studio 웹 H3.1, 텍스트 프롬프트(CRT TV, 화면은 균일 단색 패널) | 40 크레딧 | 2026-11-12 | 블렌더에서 화면 슬롯 분리
+
+### 소품 8종 (2026-11-12, Tripo Studio 웹 H3.1, 2K, 삼각형)
+- 도구/라이선스: Tripo AI 웹 생성(유료 크레딧, 각 40). 공통 스타일 문구 뒤에 붙임: `stylized low-poly, hand-painted flat colors, warm muted palette, soft rounded shapes, prop from an old Korean countryside house, single object, plain background, no text, no logo`
+- soban(소반): "a small round low wooden tray table with four short curved legs, dark varnished wood with worn edges, about 45 cm wide and 30 cm tall" — 폴리 20000
+- kettle(주전자): "a small dented brass water kettle with a round lid and a curved spout" — 20000
+- cushion(방석): 1차 "a square flat floor cushion, faded red silk cover with a simple green border, slightly squashed"는 덩어리 모양이라 버리고, 2차 "a thin flat square floor cushion pad like a Korean zabuton, faded red silk top surface with a narrow green trim around the edge, flat and low" 채택 — 5000 (크레딧 80)
+- photo_frame(사진 액자): "a rectangular wooden picture frame holding a faded old photograph with blurred indistinct figures, no faces visible" — 20000
+- tv_cabinet(TV장): "a low wide wooden cabinet with two small sliding doors and a simple mother-of-pearl flower inlay, short legs" — 20000
+- shoulder_bag(가방): "a worn canvas shoulder bag lying on the floor, flap half open" — 20000 (결과는 세워진 형태, 뚜껑 닫힘)
+- film_can(필름 통): "a round flat metal film reel canister with a plain paper label, slightly dented" — 20000
+- paper_notes(필기 종이): 1차는 한옥 그림이 나와 버리고, 2차 "a thin flat rectangular sheet of white lined notebook paper filled with many rows of tiny handwritten blue ink scribble lines like a screenplay page, no drawings, lying flat" 채택 — 5000 (크레딧 80)
+- 총 크레딧 400(웹 잔액 3475 → 3075 예상). 파일: SourceArt/Generated/<이름>/<이름>.fbx
