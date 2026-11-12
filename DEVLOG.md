@@ -153,3 +153,8 @@
 ### 2026-11-12 TV 화면 발광 연출
 - M_TV_v2_Screen에 FlickerAmount/FlickerSpeed 맥동 추가, MI_TV_v2_Screen Brightness 1.8, TV_A 앞 PointLight TVGlow_A(-200,0,100, 12cd, 반경 300, 푸른 흰빛).
 - 처음 Brightness 4 / 라이트 1000cd는 레벨 노출(AutoExposureBias 6) 때문에 방 전체가 하얗게 날아가서 낮춤. 엔딩에서 화면 끌 때 라이트도 같이 꺼야 함(미구현).
+
+### 2026-11-12 TV 화면 검정~파랑 맥동 + TV_B 교체
+- M_TV_v2_Screen: Pulse = Lerp(PulseMin, 1, 0.5+0.5*Sin(Time*PulseSpeed)). MI_TV_v2_Screen: GlowColor (0.1,0.35,1.0), Brightness 2.5, PulseMin 0, PulseSpeed 2.5.
+- TV_B: SM_TV_CRT_v2d로 교체, 슬롯0=MI_TV_v2_Body, 슬롯1=MI_TV_v2_Screen_Off(무발광 어두운 유리). 화면 UV가 평면 투영이라 몸체 텍스처를 쓰면 누더기로 보여서 분리.
+- 구 TV 에셋(SM_TV_CRT, MI_TV_CRT_Screen 등)은 이제 안 씀. 사용자가 수동 삭제 가능.
