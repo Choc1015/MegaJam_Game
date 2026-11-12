@@ -30,5 +30,5 @@ protected:
 
 private:
 	bool bCarried = false;
-	ECutWorld LastWorld = ECutWorld::Theatrical;
+	ECutWorld LastWorld = ECutWorld::Directors;
 };

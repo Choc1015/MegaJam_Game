@@ -1,6 +1,8 @@
 ID,Text
 # 글은 전부 여기서 읽는다. Id.T = 극장판 전용, Id.D = 감독판 전용, Id = 공통. 줄바꿈은 \n
 # 임시 문구(안방 그레이박스 검증용). 기록 내용과 정답 조합은 기획 세션에서 다듬는다.
+# 극장판 = TV 너머의 끝난 집(.T), 감독판 = 지금의 집(.D)
+# 글자 카드: 극장판으로 처음 건너갈 때 Theatrical Cut, 결말 03:40에 Director's Cut (코드에서 직접 띄움)
 Caption.Theatrical,Theatrical Cut
 Caption.Directors,Director's Cut
 TV,꺼진 화면에 내가 비친다.

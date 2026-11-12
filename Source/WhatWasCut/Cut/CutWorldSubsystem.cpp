@@ -33,7 +33,6 @@ void UCutWorldSubsystem::OnWorldBeginPlay(UWorld& InWorld)
 {
 	Super::OnWorldBeginPlay(InWorld);
 	ApplyAll();
-	ShowCaption(TEXT("Theatrical Cut"), 2.5f);
 }
 
 // ---- 글 데이터 -------------------------------------------------------------
@@ -162,10 +161,11 @@ void UCutWorldSubsystem::CompleteSwitch()
 	CurrentWorld = (CurrentWorld == ECutWorld::Theatrical) ? ECutWorld::Directors : ECutWorld::Theatrical;
 	ApplyAll();
 
-	if (CurrentWorld == ECutWorld::Directors && !bDirectorsVisited)
+	// 시작은 감독판(지금의 집). TV 너머 극장판으로 처음 건너갈 때만 글자 카드
+	if (CurrentWorld == ECutWorld::Theatrical && !bDirectorsVisited)
 	{
 		bDirectorsVisited = true;
-		ShowCaption(TEXT("Director's Cut"), 2.f);
+		ShowCaption(TEXT("Theatrical Cut"), 2.f);
 	}
 }
 

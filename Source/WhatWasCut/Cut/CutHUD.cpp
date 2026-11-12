@@ -29,9 +29,10 @@ void ACutHUD::DrawHUD()
 
 	const float W = Canvas->SizeX;
 	const float H = Canvas->SizeY;
-	const bool bDirectors = Sub->GetCurrentWorld() == ECutWorld::Directors;
+	// 극장판 = TV 너머 이미 끝난 집(푸른 회색, 검은 띠), 감독판 = 지금의 집(따뜻한 빛). 변수명 bDirectors는 "검은 띠 판"이라는 뜻으로 쓴다.
+	const bool bDirectors = Sub->GetCurrentWorld() == ECutWorld::Theatrical;
 
-	// 판 분위기 (11/14에 후처리로 교체): 극장판은 따뜻한 노란빛, 감독판은 색 빠진 푸른 회색과 검은 띠
+	// 판 분위기 (11/14에 후처리로 교체)
 	if (bDirectors)
 	{
 		DrawRect(FLinearColor(0.35f, 0.45f, 0.55f, 0.28f), 0.f, 0.f, W, H);

@@ -63,7 +63,7 @@ private:
 	void CompleteSwitch();
 	static FString ReadTimedText(const FTimedText& T, double Now, float& OutAlpha);
 
-	ECutWorld CurrentWorld = ECutWorld::Theatrical;
+	ECutWorld CurrentWorld = ECutWorld::Directors;
 	bool bDirectorsVisited = false;
 
 	TArray<TWeakObjectPtr<UCutVisibilityComponent>> Registered;
