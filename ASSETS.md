@@ -70,3 +70,5 @@ WeLoveIndies는 비상업용 전용. 쓰면 비고에 "비상업용"이라고 �
 | SourceArt/Generated/phone/phone.fbx (+ 텍스처 PNG) | 3D 모델 | Tripo Studio 웹 H3.1, 이미지→3D (입력: phone_ref.png) | Tripo 약관 | 2026-11-12, 2K 텍스처, 삼각형, 폴리 30000 설정, 40크레딧, FBX 내보내기 무료 |
 | SourceArt/Generated/wardrobe/wardrobe.fbx (+ 텍스처 PNG) | 3D 모델 | Tripo Studio 웹 H3.1, 이미지→3D (입력: wardrobe_ref.png) | Tripo 약관 | 2026-11-12, 2K 텍스처, 삼각형, 폴리 30000 설정, 40크레딧, FBX 내보내기 무료 |
 | SourceArt/Generated/white_cloth/white_cloth.fbx (+ 텍스처 PNG) | 3D 모델 | Tripo Studio 웹 H3.1, 이미지→3D (입력: white_cloth_ref.png) | Tripo 약관 | 2026-11-12, 2K 텍스처, 삼각형, 폴리 30000 설정, 40크레딧, FBX 내보내기 무료 |
+
+- SM_TV_CRT_v2 (SM_TV_CRT_v2d 사용) | Tripo Studio 웹 H3.1, 텍스트 프롬프트(CRT TV, 화면은 균일 단색 패널) | 40 크레딧 | 2026-11-12 | 블렌더에서 화면 슬롯 분리
