@@ -207,3 +207,4 @@
 - 텍스트 프롬프트로 뽑은 Kitchen_Hearth/Cupboard가 이상해서, Gemini(웹, Claude in Chrome)로 레퍼런스 PNG를 만들고 Tripo Studio image-to-3D(H3.1, 각 40 크레딧)로 다시 생성. 결과 훨씬 안정적.
 - 3D 모델링 규칙: 레퍼런스 이미지(Gemini) → Tripo/Meshy 이미지 입력. gen-3d 스킬과 CLAUDE.md에 기록.
 - 임포트는 Nanite OFF + convex 콜리전.
+- 찬장(궤짝)이 마음에 안 든다는 결정으로 벽 선반(시렁)으로 교체. Gemini 레퍼런스 → Tripo 40 크레딧.
