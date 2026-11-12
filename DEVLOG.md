@@ -163,3 +163,11 @@
 - ACutTV: SetScreenOn(bool)(FadeTime 1.2초에 걸쳐 화면 Brightness와 GlowLight 강도를 같이 줄임), AllowTurnOff()(결말에서 호출하면 E가 판 전환 대신 끄기, 문구 "Turn off", 짝 TV도 같이 꺼짐), ScreenSlot/BrightnessParam/GlowLight 프로퍼티. BeginPlay에서 화면 슬롯에 MID 생성.
 - TV_A.GlowLight = TVGlow_A. 에디터 열린 채로는 Live Coding 불가라 닫고 UBT 빌드(성공).
 - 미구현: 결말 코드에서 AllowTurnOff() 호출. 미확인: PIE에서 실제로 꺼지는지.
+
+## 2026-11-12 22:50~23:10 KST · 기획 4판 (손주 = 영화감독)
+
+- **한 일:** `Docs/DESIGN.md`에 "플레이어는 손주이자 영화감독, 극장판(방 B)은 그가 이미 공개했고 이미 본 자기 영화"라는 설정을 넣었다. "감독이라는 암시" 절(대본, 필름 통, 시사회 표)과 크레딧 한 줄 `A film by her grandson`을 추가했다. `Docs/ROOM_PLAN.md` §10에 소품 4개(대본, 가방, 필름 통, 표)의 위치와 프롬프트 초안을 덧붙였고 `ROOM_PLAN_BRIEF.md`에 한 줄 적었다.
+- **쓴 AI 툴:** Claude Code (Fable 5.2, 기획 세션).
+- **사용자가 낸 것:** 주제를 더 분명히 하려는 두 안(관객이 영화 속으로 / 손주가 감독). 2번으로 결정, 감독이라는 것은 소품으로 암시, 방 B가 이미 본 극장판.
+- **AI가 낸 것:** 두 안의 비교(감독판은 감독 본인의 재편집이라 2번이 맞고 새 공간이 필요 없다), 소품 3종과 살펴보기 문구의 뜻, 크레딧 문구, 넣지 않는 것 목록.
+- **아직 안 한 것:** 소품 생성과 배치, `CutText.csv` 문구, 크레딧 화면. 구현 세션 몫이다.
