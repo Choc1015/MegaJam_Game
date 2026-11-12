@@ -125,3 +125,4 @@
 - TV 빛은 사용자가 제거. 메시 슬롯이 하나라 화면 텍스처만 교체 불가 → 유리 앞에 평면(TVScreen_A/B) + `M_TV_Noise`(Unlit, 내장 Noise 노드, Time 기반 프레임 오프셋, Brightness 1.5) 오버레이.
 - 문제: Custom HLSL 노드 버전은 화면이 검게 나옴 → 내장 노드로 재작성해 해결.
 - 미완: 스캔라인·굴러가는 띠, 판 전환/끄기 시 노이즈 숨김 연동(ACutTV 연결 안 함), 실제 PIE 확인.
+- TV 노이즈 평면이 옆에서 종이처럼 보여 볼록 돔 메시(SM_TV_Screen, 50.5x43.3cm, 중앙 +2.2cm)로 교체. Blender 연결 불가라 PowerShell로 OBJ를 직접 생성(SourceArt/Generated/tv_screen). TVScreen_B가 레벨에서 사라져 있어 새로 만듦.
