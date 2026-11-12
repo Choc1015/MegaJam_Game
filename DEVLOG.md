@@ -53,3 +53,9 @@
 
 ## 2026-11-12 (사전 점검)
 - 잼 시작 전 툴체인 확인: 빈 FirstPerson C++ 프로젝트로 Windows Development 패키징. 첫 시도 실패(MSVC C3859, 윈도우 오류 1455 = 페이징 파일 부족). 페이징 파일 확대 후 성공, zip 533MB, 실행 확인. 게임 에셋/코드 아님(잼 제출물과 무관).
+
+## 2026-11-12 (Day 1) — 코어 시스템 + 안방 그레이박스
+- 한 일: Cut 시스템 C++ 구현 (UCutWorldSubsystem: 극장판/감독판 전환·자막·텍스트 CSV 로드, UCutVisibilityComponent, ACutTV/Interactable/Pickup/UseTarget, ACutHUD 임시 틴트·레터박스·CRT 접힘 전환). E키 상호작용, 점프 제거. 텍스트는 Content/Data/CutText.csv (데이터화, 패키징 NonUFS 스테이징 추가). 안방 두 판 그레이박스를 Lvl_FirstPerson에 배치 (방 A X=0, 방 B X=6000, TV 서로 Partner).
+- 쓴 AI 툴: Claude Code (Sonnet 5.5), Unreal MCP (unreal-worker 서브에이전트로 레벨 배치).
+- 문제/해결: Live Coding 중이면 UBT 빌드 불가 → 에디터 종료 후 빌드. 컴파일은 한 번에 성공.
+- 남은 것: PIE 동작 검증, 퍼즐/궤/약봉지 조합, 엔딩, 타이틀, 후처리, 사운드 (11/13~11/14).

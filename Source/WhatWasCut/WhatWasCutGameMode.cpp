@@ -1,8 +1,9 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "WhatWasCutGameMode.h"
+#include "Cut/CutHUD.h"
 
 AWhatWasCutGameMode::AWhatWasCutGameMode()
 {
-	// stub
+	HUDClass = ACutHUD::StaticClass();
 }

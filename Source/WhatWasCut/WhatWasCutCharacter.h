@@ -90,5 +90,29 @@ public:
 	/** Returns first person camera component **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
+	/** 손에 든 물건 */
+	class ACutPickup* GetHeldItem() const { return HeldItem; }
+	void SetHeldItem(class ACutPickup* Item) { HeldItem = Item; }
+
+	/** 가운데 점 옆에 띄울 한 단어 (보고 있는 게 없으면 빈 문자열) */
+	FString GetFocusPrompt() const;
+
+	/** E: 보고 있는 물체와 상호작용 */
+	void TryInteract();
+
+	virtual void Tick(float DeltaSeconds) override;
+
+private:
+	UPROPERTY()
+	TObjectPtr<class ACutPickup> HeldItem;
+
+	UPROPERTY()
+	TObjectPtr<class ACutInteractable> FocusActor;
+
+	UPROPERTY(EditAnywhere, Category = "Cut")
+	float InteractDistance = 250.f;
+
+	float FocusTimer = 0.f;
+
 };
 

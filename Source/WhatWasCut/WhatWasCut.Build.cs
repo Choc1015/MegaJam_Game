@@ -25,12 +25,7 @@ public class WhatWasCut : ModuleRules
 
 		PublicIncludePaths.AddRange(new string[] {
 			"WhatWasCut",
-			"WhatWasCut/Variant_Horror",
-			"WhatWasCut/Variant_Horror/UI",
-			"WhatWasCut/Variant_Shooter",
-			"WhatWasCut/Variant_Shooter/AI",
-			"WhatWasCut/Variant_Shooter/UI",
-			"WhatWasCut/Variant_Shooter/Weapons"
+			"WhatWasCut/Cut"
 		});
 
 		// Uncomment if you are using Slate UI

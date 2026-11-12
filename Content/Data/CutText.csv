@@ -1,0 +1,14 @@
+ID,Text
+# 글은 전부 여기서 읽는다. Id.T = 극장판 전용, Id.D = 감독판 전용, Id = 공통. 줄바꿈은 \n
+# 임시 문구(안방 그레이박스 검증용). 기록 내용과 정답 조합은 기획 세션에서 다듬는다.
+Caption.Theatrical,Theatrical Cut
+Caption.Directors,Director's Cut
+TV,꺼진 화면에 내가 비친다.
+Bed.T,이불이 아직 따뜻하다.
+Bed.D,이불이 차갑게 식어 있다.
+Note.T,"오늘도 열이 오른다.\n약은 아직 오지 않았다."
+Note.D,"누군가 여기에 적어 두었다.\n오른쪽 서랍, 푸른 봉지."
+Chest,잠겨 있지 않다.
+Medicine,작은 약봉지.
+Medicine.Success,"숨소리가 조금 고르게 된다."
+Medicine.Wrong,"이게 아니다."
