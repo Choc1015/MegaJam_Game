@@ -122,3 +122,4 @@ WeLoveIndies는 비상업용 전용. 쓰면 비고에 "비상업용"이라고 �
 | SM_StrawHat (/Game/Art/Generated/straw_hat) | Gemini 웹 레퍼런스 → Tripo Studio H3.1 이미지→3D (40크레딧) | 마루 벽걸이 밀짚모자. straw_hat_ref.png | 2026-11-13 |
 | SM_StrawBroom (/Game/Art/Generated/straw_broom) | Gemini 웹 레퍼런스 → Tripo Studio H3.1 이미지→3D (40크레딧) | 마루 구석 짚 빗자루. straw_broom_ref.png | 2026-11-13 |
 | SM_Bookshelf (/Game/Art/Generated/bookshelf) | Gemini 웹 레퍼런스 → Tripo Studio H3.1 이미지→3D (40크레딧) | 안방 책장. bookshelf_ref.png | 2026-11-13 |
+| SM_MedicineCabinetClosed (/Game/Art/Generated/medicine_cabinet_closed) | Gemini 웹 레퍼런스(문 닫힌 약장) → Tripo Studio H3.1 이미지→3D (40크레딧) | 기존 열린 문 약장 대체. medicine_cabinet_closed_ref.png | 2026-11-13 |
